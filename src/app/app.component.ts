@@ -1,12 +1,29 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+// app.component.ts
+
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'web-app-2023-test';
+export class AppComponent implements OnInit {
+  username: string = ''; // Initialize with an empty string
+  password: string = ''; // Initialize with an empty string
+
+  ngOnInit() {
+    // Initialization logic here, if needed
+    console.log('Component initialized');
+  }
+
+  onSubmit() {
+    // Handle form submission logic here
+    if (this.username === 'example' && this.password === 'password') {
+      console.log('Login successful');
+      // You can redirect to another page or perform other actions on successful login
+    } else {
+      console.log('Login failed. Please check your username and password.');
+      // You can show an error message or perform other actions on failed login
+    }
+  }
 }
