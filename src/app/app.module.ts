@@ -1,8 +1,6 @@
-// app.module.ts
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Add this line
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 import { AppComponent } from './app.component';
 
@@ -12,7 +10,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule // Add this line
+    FormsModule // Add FormsModule to imports
   ],
   providers: [],
   bootstrap: [AppComponent]
